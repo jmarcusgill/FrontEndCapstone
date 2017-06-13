@@ -1,0 +1,82 @@
+{
+  "comicbooks": {
+    "comic0": {
+      "publisher": "comic.publisher.name",
+      "title": "comic.name",
+      "start_year": "comic.start_year",
+      "description": "comic.description",
+      "image": "comic.image.medium_url",
+      "isOwned": true,
+      "rating": 0,
+      "uid": "user0 id"
+    },
+    "comic1": {
+      "publisher": "comic.publisher.name",
+      "title": "comic.name",
+      "start_year": "comic.start_year",
+      "description": "comic.description",
+      "image": "comic.image.medium_url",
+      "isOwned": false,
+      "rating": 0,
+      "uid": "user0 id"
+    },
+    "comic2": {
+      "publisher": "comic.publisher.name",
+      "title": "comic.name",
+      "start_year": "comic.start_year",
+      "description": "comic.description",
+      "image": "comic.image.medium_url",
+      "isOwned": true,
+      "rating": 0,
+      "uid": "user1 id"
+    },
+    "comic3": {
+      "publisher": "comic.publisher.name",
+      "title": "comic.name",
+      "start_year": "comic.start_year",
+      "description": "comic.description",
+      "image": "comic.image.medium_url",
+      "isOwned": false,
+      "rating": 0,
+      "uid": "user1 id"
+    }
+  },
+  "characters": {
+    "character0": {
+      "name": "character.name",
+      "real_name": "character.real_name",
+      "description": "character.description",
+      "first_appeared": "character.first_appeared_in_issue.name",
+      "image": "character.image.medium_url",
+      "uid": "user0 id",
+      "isVillain": true
+    },
+    "character1": {
+      "name": "character.name",
+      "real_name": "character.real_name",
+      "description": "character.description",
+      "first_appeared": "character.first_appeared_in_issue.name",
+      "image": "character.image.medium_url",
+      "uid": "user0 id",
+      "isVillain": false
+    },
+    "character2": {
+      "name": "character.name",
+      "real_name": "character.real_name",
+      "description": "character.description",
+      "first_appeared": "character.first_appeared_in_issue.name",
+      "image": "character.image.medium_url",
+      "uid": "user1 id",
+      "isVillain": true
+    },
+    "character3": {
+      "name": "character.name",
+      "real_name": "character.real_name",
+      "description": "character.description",
+      "first_appeared": "character.first_appeared_in_issue.name",
+      "image": "character.image.medium_url",
+      "uid": "user1 id",
+      "isVillain": false
+    }
+  }
+}
