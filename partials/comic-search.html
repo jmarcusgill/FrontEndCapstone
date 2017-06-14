@@ -1,10 +1,24 @@
-<h1>INSIDE comic-search</h1>
-<div class="container">
+<div class="container col-xs-offset-6">
+  <h1>INSIDE comic-search</h1>
   <h2>Search For A Comic Book</h2>
-  <input type="text" placeholder="find comics" ng-model="newComic">
+  <input type="text" placeholder="find comics" ng-model="comicSearch">
   <button class="btn btn-warning" ng-click="findComics()">Find Comic Book</button>
-
-
-
-
 </div>
+
+
+
+
+<div class="container">
+  <div ng-repeat="comic in comicAPIresults" class="col-xs-4">
+    <div class="panel panel-warning">
+      <div class="panel-heading">{{comic.name}}</div>
+        <div class="thumbnail">
+          <img src="{{comic.image.medium_url}}">
+        </div>
+          <div class="panel-body">Start Year: {{comic.start_year}}</div>
+    </div>
+  </div>
+</div>
+
+
+

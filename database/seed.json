@@ -1,4 +1,16 @@
 {
+
+  "users": {
+    "user0": {
+      "username": "marcus",
+      "uid": "fWSgwLhOimhCl2sNiDlXggA8EP72"
+    },
+    "user1": {
+      "username": "laura",
+      "uid": "dv0pFT1mtvOrC7jDoI1KbHxuFY22"
+    }
+
+  },
   "comicbooks": {
     "comic0": {
       "publisher": "comic.publisher.name",
@@ -8,7 +20,7 @@
       "image": "comic.image.medium_url",
       "isOwned": true,
       "rating": 0,
-      "uid": "user0 id"
+      "uid": "fWSgwLhOimhCl2sNiDlXggA8EP72"
     },
     "comic1": {
       "publisher": "comic.publisher.name",
@@ -18,7 +30,7 @@
       "image": "comic.image.medium_url",
       "isOwned": false,
       "rating": 0,
-      "uid": "user0 id"
+      "uid": "fWSgwLhOimhCl2sNiDlXggA8EP72"
     },
     "comic2": {
       "publisher": "comic.publisher.name",
@@ -28,7 +40,7 @@
       "image": "comic.image.medium_url",
       "isOwned": true,
       "rating": 0,
-      "uid": "user1 id"
+      "uid": "dv0pFT1mtvOrC7jDoI1KbHxuFY22"
     },
     "comic3": {
       "publisher": "comic.publisher.name",
@@ -38,7 +50,7 @@
       "image": "comic.image.medium_url",
       "isOwned": false,
       "rating": 0,
-      "uid": "user1 id"
+      "uid": "dv0pFT1mtvOrC7jDoI1KbHxuFY22"
     }
   },
   "characters": {
@@ -48,7 +60,7 @@
       "description": "character.description",
       "first_appeared": "character.first_appeared_in_issue.name",
       "image": "character.image.medium_url",
-      "uid": "user0 id",
+      "uid": "fWSgwLhOimhCl2sNiDlXggA8EP72",
       "isVillain": true
     },
     "character1": {
@@ -57,7 +69,7 @@
       "description": "character.description",
       "first_appeared": "character.first_appeared_in_issue.name",
       "image": "character.image.medium_url",
-      "uid": "user0 id",
+      "uid": "fWSgwLhOimhCl2sNiDlXggA8EP72",
       "isVillain": false
     },
     "character2": {
@@ -66,7 +78,7 @@
       "description": "character.description",
       "first_appeared": "character.first_appeared_in_issue.name",
       "image": "character.image.medium_url",
-      "uid": "user1 id",
+      "uid": "dv0pFT1mtvOrC7jDoI1KbHxuFY22",
       "isVillain": true
     },
     "character3": {
@@ -75,7 +87,7 @@
       "description": "character.description",
       "first_appeared": "character.first_appeared_in_issue.name",
       "image": "character.image.medium_url",
-      "uid": "user1 id",
+      "uid": "dv0pFT1mtvOrC7jDoI1KbHxuFY22",
       "isVillain": false
     }
   }
