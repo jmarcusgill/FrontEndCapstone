@@ -3,3 +3,14 @@
 body {
   background-color: $purple;
 }
+
+.card {
+  opacity: 0.5;
+  transition: 0.25s ease-in-ease-out;
+}
+
+.card:hover {
+  opacity: 1;
+}
+
+

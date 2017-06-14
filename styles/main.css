@@ -1,2 +1,9 @@
 body {
   background-color: #B10DC9; }
+
+.card {
+  opacity: 0.5;
+  transition: 0.25s ease-in-ease-out; }
+
+.card:hover {
+  opacity: 1; }

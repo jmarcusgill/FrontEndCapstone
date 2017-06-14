@@ -25,6 +25,7 @@ app.controller("AuthCtrl", function($location, $rootScope, $scope, AuthFactory, 
   $scope.registerUser = () => {
     AuthFactory.registerWithEmail($scope.auth).then((didRegister) =>{
       $scope.auth.uid = didRegister.uid;
+      console.log($scope.auth);
       return UserFactory.addUser($scope.auth);
     }, (error) => {
       console.log("registerWithEmail error", error);
