@@ -10,7 +10,7 @@
 <div ng-include="'./partials/navbar.html'"></div>
   <div class="container">
     <div class="row">
-      <div class="col-xs-8 col-xs-offset-4" ng-view>
+      <div class="col-xs-8" ng-view>
         <h1>ComicGetIt</h1>
 
       </div>
@@ -20,6 +20,7 @@
 
 
 <!-- 3rd Party Scripts -->
+<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
 <script type="text/javascript" src="./lib/bower_components/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="./lib/bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script type="text/javascript" src="./lib/bower_components/angular/angular.min.js"></script>
@@ -33,6 +34,7 @@
 
 <!-- Factory Scripts -->
 <script type="text/javascript" src="./javascripts/factories/AuthFactory.js"></script>
+<script type="text/javascript" src="./javascripts/factories/UserFactory.js"></script>
 <script type="text/javascript" src="./javascripts/factories/ComicFactory.js"></script>
 <script type="text/javascript" src="./javascripts/factories/CharacterFactory.js"></script>
 
