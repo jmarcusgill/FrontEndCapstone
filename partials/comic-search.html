@@ -9,14 +9,19 @@
 
 
 <div class="container">
-  <div ng-repeat="comic in comicAPIresults" class="col-xs-4">
-    <div class="panel panel-warning">
-      <div class="panel-heading">{{comic.name}}</div>
-        <div class="thumbnail">
-          <img src="{{comic.image.medium_url}}">
-        </div>
-          <div class="panel-body">Start Year: {{comic.start_year}}</div>
-    </div>
+    <div ng-repeat="comic in comicAPIresults">
+      <div class="clearfix" ng-if="$index % 4 == 0"></div>
+        <div class="col-xs-3 card">
+          <div class="panel panel-warning">
+            <div class="panel-heading">{{comic.name}}</div>
+              <div class="thumbnail">
+                <img src="{{comic.image.medium_url}}">
+              </div>
+              <div class="panel-body">Start Year: {{comic.start_year}}</div>
+                <button class="btn-success col-xs-6" ng-click="isOwned(comic)">Own It</button>
+                <button class="btn-success col-xs-6" ng-click="notOwned(comic)">Want It</button>
+          </div>
+      </div>
   </div>
 </div>
 

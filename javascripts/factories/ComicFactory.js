@@ -33,6 +33,19 @@ app.factory("ComicFactory", function($http, $q, FIREBASE_CONFIG, COMICVINE_CONFI
     });
   };
 
-  return {findAllComics:findAllComics, getComicList:getComicList};
+  let postNewComic = (newComic) => {
+    console.log("factory", newComic);
+    return $q ((resolve, reject) => {
+      $http.post(`${FIREBASE_CONFIG.databaseURL}/comicbooks.json`,
+        JSON.stringify(newComic)
+        ).then((resultz) => {
+        resolve(resultz);
+      }).catch((error) => {
+        reject(error);
+      });
+    });
+  };
+
+  return {findAllComics:findAllComics, getComicList:getComicList, postNewComic:postNewComic};
 
 });
