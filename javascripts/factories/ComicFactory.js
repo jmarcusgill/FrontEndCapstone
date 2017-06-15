@@ -25,7 +25,7 @@ app.factory("ComicFactory", function($http, $q, FIREBASE_CONFIG, COMICVINE_CONFI
     return $q ((resolve, reject) => {
      $http.get(`http://comicvine.gamespot.com/api/volumes/?api_key=${COMICVINE_CONFIG.apiKey}&format=json&filter=name:${userInput}`, JSON.stringify(userInput))
       .then((APIresultz) => {
-        console.log("in factory", APIresultz);
+        console.log("in comicfactory", APIresultz);
         resolve(APIresultz);
       }).catch((error) => {
         reject(error);
