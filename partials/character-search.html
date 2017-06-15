@@ -1,1 +1,34 @@
-<h1>INSIDE character-search</h1>
+<div class="container col-xs-offset-6">
+  <h1>INSIDE character-search</h1>
+  <h2>Search For A Character</h2>
+  <input type="text" placeholder="find hero or villain" ng-model="characterSearch">
+  <button class="btn btn-warning" ng-click="findCharacters()">Find Characters</button>
+</div>
+
+
+
+
+<div class="container">
+    <div ng-repeat="character in characterAPIresults">
+      <div class="clearfix" ng-if="$index % 4 == 0"></div>
+        <div class="col-xs-3 card">
+          <div class="panel panel-warning">
+            <div class="panel-heading">
+              <div class="panel-title">
+                <p>{{character.name}}</p>
+                <p>AKA: {{character.real_name}}</p>
+              </div>
+            </div>
+              <div class="thumbnail">
+                <img src="{{character.image.medium_url}}">
+              </div>
+              <div class="panel-body">
+                <p>First Appeared In Issue: {{character.first_appeared_in_issue.name}}</p>
+                <p>Bio: {{character.deck}}</p>
+              </div>
+                <button class="btn-success col-xs-6" ng-click="isHero(character)">HERO</button>
+                <button class="btn-success col-xs-6" ng-click="isVillain(character)">VILLIAN</button>
+          </div>
+      </div>
+  </div>
+</div>

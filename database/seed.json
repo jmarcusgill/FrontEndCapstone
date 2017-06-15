@@ -51,38 +51,38 @@
   },
   "characters": {
     "character0": {
-      "name": "character.name",
-      "real_name": "character.real_name",
-      "description": "character.description",
-      "first_appeared": "character.first_appeared_in_issue.name",
-      "image": "character.image.medium_url",
-      "uid": "fWSgwLhOimhCl2sNiDlXggA8EP72",
-      "isVillain": true
-    },
-    "character1": {
-      "name": "character.name",
-      "real_name": "character.real_name",
-      "description": "character.description",
-      "first_appeared": "character.first_appeared_in_issue.name",
-      "image": "character.image.medium_url",
+      "name": "Batman",
+      "real_name": "Bruce Wayne",
+      "description": "Bruce Wayne, who witnessed the murder of his billionaire parents as a child, swore to avenge their deaths. He trained extensively to achieve mental and physical perfection, mastering martial arts, detective skills, and criminal psychology. Costumed as a bat to prey on criminals' fears, and utilizing a high-tech arsenal, he became the legendary Batman.",
+      "first_appeared": "The Case of the Chemical Syndicate",
+      "image": "https://comicvine.gamespot.com/api/image/scale_medium/5481227-asbm_1_dir_cut_57d89cbee0e113.09132512.jpg",
       "uid": "fWSgwLhOimhCl2sNiDlXggA8EP72",
       "isVillain": false
     },
+    "character1": {
+      "name": "The Joker",
+      "real_name": "Jack Naiper",
+      "description": "The Joker, Clown Prince of Crime, is Batman's arch-nemesis. An agent of chaos known for his malicious plots, wacky gadgets and insidious smile, he has caused Batman more suffering than any other villain he has ever faced. His origin, name, and true motivations remain a mystery.",
+      "first_appeared": "The Legend of the Batman: Who He Is and How He Came To Be; The Joker",
+      "image": "https://comicvine.gamespot.com/api/image/scale_medium/4214608-bm_cv37_large.jpg",
+      "uid": "fWSgwLhOimhCl2sNiDlXggA8EP72",
+      "isVillain": true
+    },
     "character2": {
-      "name": "character.name",
-      "real_name": "character.real_name",
-      "description": "character.description",
-      "first_appeared": "character.first_appeared_in_issue.name",
-      "image": "character.image.medium_url",
+      "name": "Poison Ivy",
+      "real_name": "Pamela Lillian Isley",
+      "description": "A brilliant botanical biochemist, Pamela Isley is a fervent eco-terrorist out to save the world's plant life by any means necessary. She often finds herself at odds with Batman, though they have, on occasion, fought on the same side. She has had a long friendship with Harley Quinn and is responsible for Harley's meta-human abilities. Ivy, Harley, and Catwoman later teamed up as the Gotham City Sirens. Post-New 52, she was a member of the Birds of Prey for a time before betraying them to further her cause.",
+      "first_appeared": "null",
+      "image": "https://comicvine.gamespot.com/api/image/scale_medium/5691759-5690781-asbm_7_pg6.jpg",
       "uid": "dv0pFT1mtvOrC7jDoI1KbHxuFY22",
       "isVillain": true
     },
     "character3": {
-      "name": "character.name",
-      "real_name": "character.real_name",
-      "description": "character.description",
-      "first_appeared": "character.first_appeared_in_issue.name",
-      "image": "character.image.medium_url",
+      "name": "Batgirl",
+      "real_name": "Barbara Gordon",
+      "description": "Barbara Gordon was the first modern age Batgirl until she was brutally shot by the Joker, rendering her paralyzed from the waist down. Barbara reinvented herself as Oracle, providing intelligence to the DCU heroes and leading the Birds of Prey. She has recently become Batgirl once again to protect Gotham City.",
+      "first_appeared": "The Million Dollar Debut of Batgirl",
+      "image": "https://comicvine.gamespot.com/api/image/scale_medium/4696624-batgirl_of_burnside_by_eloelo-d808qzr.jpg",
       "uid": "dv0pFT1mtvOrC7jDoI1KbHxuFY22",
       "isVillain": false
     }
