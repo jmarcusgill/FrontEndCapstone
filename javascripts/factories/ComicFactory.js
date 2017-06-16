@@ -46,6 +46,18 @@ app.factory("ComicFactory", function($http, $q, FIREBASE_CONFIG, COMICVINE_CONFI
     });
   };
 
-  return {findAllComics:findAllComics, getComicList:getComicList, postNewComic:postNewComic};
+  let deleted = (id) => {
+    console.log("in factory", id);
+    return $q((resolve, reject) => {
+      $http.delete(`${FIREBASE_CONFIG.databaseURL}/comicbooks/${id}.json`)
+      .then((results) => {
+        resolve(results);
+      }).catch((error) => {
+        reject(error);
+      });
+    });
+  };
+
+  return {findAllComics:findAllComics, getComicList:getComicList, postNewComic:postNewComic, deleted:deleted};
 
 });

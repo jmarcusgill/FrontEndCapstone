@@ -20,9 +20,6 @@ app.factory("CharacterFactory", function($http, $q, FIREBASE_CONFIG, COMICVINE_C
     });
   };
 
-
-
-
   let findMyCharacter = (userInput) => {
     return $q ((resolve, reject) => {
      $http.get(`http://comicvine.gamespot.com/api/characters/?api_key=${COMICVINE_CONFIG.apiKey}&format=json&filter=name:${userInput}`, JSON.stringify(userInput))
@@ -48,8 +45,19 @@ app.factory("CharacterFactory", function($http, $q, FIREBASE_CONFIG, COMICVINE_C
     });
   };
 
+  let deleted = (id) => {
+    return $q((resolve, reject) => {
+      $http.delete(`${FIREBASE_CONFIG.databaseURL}/characters/${id}.json`)
+      .then((results) => {
+        resolve(results);
+      }).catch((error) => {
+        reject(error);
+      });
+    });
+  };
 
-  return {getCharacterList:getCharacterList, findMyCharacter:findMyCharacter, postNewCharacter:postNewCharacter};
+
+  return {getCharacterList:getCharacterList, findMyCharacter:findMyCharacter, postNewCharacter:postNewCharacter, deleted:deleted};
 
 
 

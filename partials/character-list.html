@@ -15,8 +15,11 @@
                 <img src="{{character.image}}">
               </div>
               <div class="panel-body">
-                <p>First Appeared In Issue: {{character.first_appeared_in_issue.name}}</p>
-                <p>Bio: {{character.deck}}</p>
+                <p>First Appeared In Issue: {{character.first_appeared}}</p>
+                <p>Bio: {{character.description}}</p>
+              </div>
+              <div class="col-xs-1">
+                <button class="character-btn" ng-click="deleteCharacter(character.id)"><i class="fa fa-times character-icon"></i></button>
               </div>
           </div>
     </div>
@@ -39,13 +42,13 @@
                 <img src="{{character.image}}">
               </div>
               <div class="panel-body">
-                <p>First Appeared In Issue: {{character.first_appeared_in_issue.name}}</p>
-                <p>Bio: {{character.deck}}</p>
+                <p>First Appeared In Issue: {{character.first_appeared}}</p>
+                <p>Bio: {{character.description}}</p>
               </div>
+                <div class="col-xs-1">
+                  <button class="character-btn" ng-click="deleteCharacter(character.id)"><i class="fa fa-times character-icon"></i></button>
+                </div>
           </div>
       </div>
   </div>
-</div>
-
-
 </div>
