@@ -13,5 +13,15 @@ app.controller("CharacterListCtrl", function($rootScope, $scope, CharacterFactor
 
   getCharacters();
 
+  $scope.deleteCharacter = (characterId) => {
+    console.log("delete char working");
+    CharacterFactory.deleted(characterId).then(() => {
+      getCharacters();
+    }).catch((error) => {
+      console.log("delete", error);
+    });
+  };
+
+
 
 });

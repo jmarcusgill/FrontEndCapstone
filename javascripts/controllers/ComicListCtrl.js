@@ -13,5 +13,14 @@ app.controller("ComicListCtrl", function($rootScope, $scope, ComicFactory) {
 
   getComics();
 
+  $scope.deleteComic = (comicId) => {
+    console.log("delete click working");
+    ComicFactory.deleted(comicId).then(() => {
+      getComics();
+    }).catch((error) => {
+      console.log("delete", error);
+    });
+  };
+
 
 });
