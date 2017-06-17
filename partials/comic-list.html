@@ -11,6 +11,8 @@
             </div>
             <div class="panel-body">Start Year: {{comic.start_year}}</div>
             <button class="comic-btn" ng-click="deleteComic(comic.id)"><i class="fa fa-times comic-icon"></i></button>
+            <button class="fa fa-heart" ng-click="rateComicUp(comic)">{{comic.rating}}</button>
+            <button class="fa fa-thumbs-down" ng-click="rateComicDown(comic)"></button>
         </div>
       </div>
   </div>
