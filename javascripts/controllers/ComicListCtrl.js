@@ -1,7 +1,6 @@
 app.controller("ComicListCtrl", function($rootScope, $scope, $routeParams, ComicFactory) {
 
   $scope.comics = [];
-  $scope.selectedComic = {};
   let ratingCounter = 0;
 
   let getComics = () => {
@@ -14,6 +13,15 @@ app.controller("ComicListCtrl", function($rootScope, $scope, $routeParams, Comic
   };
 
   getComics();
+
+  $scope.addToOwned = (comic) => {
+    console.log("click working", comic);
+    comic.isOwned = true;
+  ComicFactory.addWantComicToOwned(comic).then((response) => {
+    }).catch((error) => {
+      console.log("Add error", error);
+    });
+  };
 
   $scope.deleteComic = (comicId) => {
     console.log("delete click working");

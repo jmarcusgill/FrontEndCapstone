@@ -78,6 +78,26 @@ app.factory("ComicFactory", function($http, $q, FIREBASE_CONFIG, COMICVINE_CONFI
     });
   };
 
-  return {findAllComics:findAllComics, getComicList:getComicList, postNewComic:postNewComic, deleted:deleted, editRating:editRating};
+  let addWantComicToOwned = (comic) => {
+    return $q((resolve, reject) => {
+      $http.put(`${FIREBASE_CONFIG.databaseURL}/comicbooks/${comic.id}.json`,
+        JSON.stringify({
+          publisher: comic.publisher,
+          title: comic.title,
+          start_year: comic.start_year,
+          image: comic.image,
+          isOwned: comic.isOwned,
+          rating: comic.rating,
+          uid: comic.uid
+        }))
+      .then((results) => {
+        resolve(results);
+      }).catch((error) => {
+        reject(error);
+      });
+    });
+  };
+
+  return {findAllComics:findAllComics, getComicList:getComicList, postNewComic:postNewComic, deleted:deleted, editRating:editRating, addWantComicToOwned:addWantComicToOwned};
 
 });
