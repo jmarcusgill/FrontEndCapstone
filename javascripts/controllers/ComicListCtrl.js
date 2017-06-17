@@ -1,6 +1,8 @@
-app.controller("ComicListCtrl", function($rootScope, $scope, ComicFactory) {
+app.controller("ComicListCtrl", function($rootScope, $scope, $routeParams, ComicFactory) {
 
   $scope.comics = [];
+  $scope.selectedComic = {};
+  let ratingCounter = 0;
 
   let getComics = () => {
     ComicFactory.getComicList($rootScope.user.uid).then((comicz)=>{
@@ -22,5 +24,20 @@ app.controller("ComicListCtrl", function($rootScope, $scope, ComicFactory) {
     });
   };
 
+  $scope.rateComicUp = (comicobj) => {
+    comicobj.rating ++;
+    ComicFactory.editRating(comicobj).then((results) => {
+    }).catch((error) => {
+      console.log("edit rate comics", error);
+    });
+  };
+
+  $scope.rateComicDown = (comicobj) => {
+    comicobj.rating --;
+    ComicFactory.editRating(comicobj).then((results) => {
+    }).catch((error) => {
+      console.log("edit rate comics", error);
+    });
+  };
 
 });
