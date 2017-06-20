@@ -10,9 +10,13 @@
               <img src="{{comic.image}}">
             </div>
             <div class="panel-body">Start Year: {{comic.start_year}}</div>
-            <button class="comic-btn" ng-click="deleteComic(comic.id)"><i class="fa fa-times comic-icon"></i></button>
-            <button class="fa fa-heart" ng-click="rateComicUp(comic)">{{comic.rating}}</button>
-            <button class="fa fa-thumbs-down" ng-click="rateComicDown(comic)"></button>
+            <div class="comic-btn">
+              <button ng-click="deleteComic(comic.id)"><i class="fa fa-trash comic-icon"></i></button>
+              <button class="fa fa-thumbs-up" ng-click="rateComicUp(comic)"></button>
+              {{comic.rating}}
+              <button class="fa fa-thumbs-down" ng-click="rateComicDown(comic)"></button>
+              <button class="fa fa-cart-arrow-down" ng-click="addToWishList(comic)"></button>
+            </div>
         </div>
       </div>
   </div>
@@ -29,7 +33,8 @@
               <img src="{{comic.image}}">
             </div>
             <div class="panel-body">Start Year: {{comic.start_year}}</div>
-            <button class="comic-btn" ng-click="deleteComic(comic.id)"><i class="fa fa-times comic-icon"></i></button>
+            <button ng-click="deleteComic(comic.id)"><i class="fa fa-trash comic-icon"></i></button>
+            <button class="fa fa-check" ng-click="addToOwned(comic)"></button>
         </div>
       </div>
   </div>

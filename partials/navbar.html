@@ -15,7 +15,9 @@
       <ul class="nav navbar-nav navbar-right" ng-if="user.uid">
       <!-- thingy in navItems, navItems must be on scope and must be an array -->
         <li><a ng-href="#!/comic/list">View My Comics</a></li>
+        <li><a ng-href="#!/comic/search">Search For Comics</a></li>
         <li><a ng-href="#!/character/list">Favorite Characters</a></li>
+        <li><a ng-href="#!/character/search">Search For Characters</a></li>
         <li><a ng-href="#!/logout">Logout</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right" ng-if="!user.uid">
