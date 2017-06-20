@@ -23,6 +23,15 @@ app.controller("ComicListCtrl", function($rootScope, $scope, $routeParams, Comic
     });
   };
 
+  $scope.addToWishList = (comic) => {
+    console.log("click working", comic);
+    comic.isOwned = false;
+  ComicFactory.addComicToWishList(comic).then((response) => {
+    }).catch((error) => {
+      console.log("Add error", error);
+    });
+  };
+
   $scope.deleteComic = (comicId) => {
     console.log("delete click working");
     ComicFactory.deleted(comicId).then(() => {

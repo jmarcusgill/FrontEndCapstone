@@ -7,3 +7,7 @@ body {
 
 .card:hover {
   opacity: 1; }
+
+.comic-btn {
+  margin: auto;
+  text-align: center; }
