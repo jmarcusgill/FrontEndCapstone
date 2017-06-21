@@ -1,6 +1,4 @@
 <div class="container col-xs-offset-6">
-  <h1>INSIDE character-search</h1>
-  <h2>Search For A Character</h2>
   <input type="text" placeholder="find hero or villain" ng-model="characterSearch">
   <button class="btn btn-warning" ng-click="findCharacters()">Find Characters</button>
 </div>
@@ -9,6 +7,7 @@
 
 
 <div class="container">
+  <h1>Search For A Character</h1>
     <div ng-repeat="character in characterAPIresults">
       <div class="clearfix" ng-if="$index % 4 == 0"></div>
         <div class="col-xs-3 card">

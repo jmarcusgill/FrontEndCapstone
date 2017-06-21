@@ -1,6 +1,4 @@
 <div class="container col-xs-offset-6">
-  <h1>INSIDE comic-search</h1>
-  <h2>Search For A Comic Book</h2>
   <input type="text" placeholder="find comics" ng-model="comicSearch">
   <button class="btn btn-warning" ng-click="findComics()">Find Comic Book</button>
 </div>
@@ -9,6 +7,7 @@
 
 
 <div class="container">
+  <h1>Search For A Comic Book</h1>
     <div ng-repeat="comic in comicAPIresults">
       <div class="clearfix" ng-if="$index % 4 == 0"></div>
         <div class="col-xs-3 card">

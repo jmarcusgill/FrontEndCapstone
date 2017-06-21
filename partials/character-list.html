@@ -1,4 +1,3 @@
-<h1>INSIDE character-list</h1>
 <div class="container">
   <h1>HERO</h1>
     <div ng-repeat="character in characters |filter:{isVillain:false}">
@@ -11,16 +10,16 @@
                 <p>AKA: {{character.real_name}}</p>
               </div>
             </div>
-              <div class="thumbnail">
-                <img src="{{character.image}}">
-              </div>
-              <div class="panel-body">
-                <p>First Appeared In Issue: {{character.first_appeared}}</p>
-                <p>Bio: {{character.description}}</p>
-              </div>
-              <div class="col-xs-1">
-                <button class="character-btn" ng-click="deleteCharacter(character.id)"><i class="fa fa-times character-icon"></i></button>
-              </div>
+            <div class="thumbnail">
+              <img src="{{character.image}}">
+            </div>
+            <div class="panel-body">
+              <p>First Appeared In Issue: {{character.first_appeared}}</p>
+              <p>Bio: {{character.description}}</p>
+            </div>
+            <div class="character-btn">
+              <button ng-click="deleteCharacter(character.id)"><i class="fa fa-trash character-icon"></i></button>
+            </div>
           </div>
     </div>
   </div>
@@ -29,26 +28,26 @@
 <div class="container">
   <h1>VILLAIN</h1>
   <div ng-repeat="character in characters |filter:{isVillain:true}">
-      <div class="clearfix" ng-if="$index % 4 == 0"></div>
-        <div class="col-xs-3 card">
-          <div class="panel panel-warning">
-            <div class="panel-heading">
-              <div class="panel-title">
-                <p>{{character.name}}</p>
-                <p>AKA: {{character.real_name}}</p>
-              </div>
+    <div class="clearfix" ng-if="$index % 4 == 0"></div>
+      <div class="col-xs-3 card">
+        <div class="panel panel-warning">
+          <div class="panel-heading">
+            <div class="panel-title">
+              <p>{{character.name}}</p>
+              <p>AKA: {{character.real_name}}</p>
             </div>
-              <div class="thumbnail">
-                <img src="{{character.image}}">
-              </div>
-              <div class="panel-body">
-                <p>First Appeared In Issue: {{character.first_appeared}}</p>
-                <p>Bio: {{character.description}}</p>
-              </div>
-                <div class="col-xs-1">
-                  <button class="character-btn" ng-click="deleteCharacter(character.id)"><i class="fa fa-times character-icon"></i></button>
-                </div>
           </div>
+          <div class="thumbnail">
+            <img src="{{character.image}}">
+          </div>
+            <div class="panel-body">
+              <p>First Appeared In Issue: {{character.first_appeared}}</p>
+              <p>Bio: {{character.description}}</p>
+            </div>
+              <div class="character-btn">
+                <button ng-click="deleteCharacter(character.id)"><i class="fa fa-trash character-icon"></i></button>
+              </div>
+        </div>
       </div>
   </div>
 </div>

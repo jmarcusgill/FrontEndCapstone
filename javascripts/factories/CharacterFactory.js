@@ -25,7 +25,6 @@ app.factory("CharacterFactory", function($http, $q, FIREBASE_CONFIG, COMICVINE_C
      $http.get(`http://comicvine.gamespot.com/api/characters/?api_key=${COMICVINE_CONFIG.apiKey}&format=json&filter=name:${userInput}`, JSON.stringify(userInput))
       .then((APIresultz) => {
         resolve(APIresultz);
-        console.log("in charfactory", APIresultz);
       }).catch((error) => {
         reject(error);
       });
@@ -33,7 +32,6 @@ app.factory("CharacterFactory", function($http, $q, FIREBASE_CONFIG, COMICVINE_C
   };
 
   let postNewCharacter = (newCharacter) => {
-    console.log(newCharacter);
     return $q ((resolve, reject) => {
       $http.post(`${FIREBASE_CONFIG.databaseURL}/characters.json`,
         JSON.stringify(newCharacter)

@@ -1,1 +1,1 @@
-var app = angular.module("ComicBookApp", ["ngRoute"]);
+var app = angular.module("ComicBookApp", ["ngRoute", "ngAnimate", "ngSanitize", "ngToast", "ui.bootstrap"]);

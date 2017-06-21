@@ -3,15 +3,17 @@
 <head>
   <title>Front End Capstone</title>
   <link rel="stylesheet" href="./lib/bower_components/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="lib/bower_components/ngToast/dist/ngToast.min.css">
   <link rel="stylesheet" type="text/css" href="./styles/main.css">
 </head>
 <body ng-app="ComicBookApp">
 
 <div ng-include="'./partials/navbar.html'"></div>
+  <toast></toast>
   <div class="container">
     <div class="row">
-      <div class="col-xs-8" ng-view>
+      <div class="col-xs-8 mainContainer" ng-view>
         <h1>ComicGetIt</h1>
 
       </div>
@@ -26,6 +28,12 @@
 <script type="text/javascript" src="./lib/bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script type="text/javascript" src="./lib/bower_components/angular/angular.min.js"></script>
 <script type="text/javascript" src="./lib/bower_components/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="./lib/bower_components/angular-animate/angular-animate.min.js"></script>
+<script type="text/javascript" src="./lib/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+<script type="text/javascript" src="./javascripts/vendor/ui-bootstrap-tpls-2.5.0.min.js"></script>
+<script type="text/javascript" src="./lib/bower_components/ngToast/dist/ngToast.min.js"></script>
+
+
 
 <!-- Personal Scripts -->
 <script type="text/javascript" src="./javascripts/app.js"></script>
