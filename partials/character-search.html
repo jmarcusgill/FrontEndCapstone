@@ -1,4 +1,5 @@
-<div class="container col-xs-offset-6">
+<div class="container col-xs-4 col-xs-offset-4">
+  <h1>Find Characters</h1>
   <input type="text" placeholder="find hero or villain" ng-model="characterSearch">
   <button class="btn btn-warning" ng-click="findCharacters()">Find Characters</button>
 </div>
@@ -7,8 +8,7 @@
 
 
 <div class="container">
-  <h1>Search For A Character</h1>
-    <div ng-repeat="character in characterAPIresults">
+    <div ng-repeat="character in characterAPIresults" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">
       <div class="clearfix" ng-if="$index % 4 == 0"></div>
         <div class="col-xs-3 card">
           <div class="panel panel-warning">
@@ -25,8 +25,10 @@
                 <p>First Appeared In Issue: {{character.first_appeared_in_issue.name}}</p>
                 <p>Bio: {{character.deck}}</p>
               </div>
+              <span ng-show="hoverButtons" class="animate-show-hover-button">
                 <button class="btn-success col-xs-6" ng-click="isHero(character)">HERO</button>
                 <button class="btn-success col-xs-6" ng-click="isVillain(character)">VILLIAN</button>
+                </span>
           </div>
       </div>
   </div>

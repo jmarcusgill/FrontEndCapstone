@@ -20,6 +20,13 @@ app.controller("CharacterListCtrl", function($rootScope, $scope, CharacterFactor
     });
   };
 
+  $scope.hoverIn = function(){
+        this.hoverBio = true;
+    };
+
+    $scope.hoverOut = function(){
+        this.hoverBio = false;
+    };
 
 
 });

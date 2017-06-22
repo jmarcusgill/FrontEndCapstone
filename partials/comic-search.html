@@ -1,4 +1,5 @@
-<div class="container col-xs-offset-6">
+<div class="container col-xs-4 col-xs-offset-4">
+  <h1>Search Comic Books</h1>
   <input type="text" placeholder="find comics" ng-model="comicSearch">
   <button class="btn btn-warning" ng-click="findComics()">Find Comic Book</button>
 </div>
@@ -7,8 +8,7 @@
 
 
 <div class="container">
-  <h1>Search For A Comic Book</h1>
-    <div ng-repeat="comic in comicAPIresults">
+    <div ng-repeat="comic in comicAPIresults" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">
       <div class="clearfix" ng-if="$index % 4 == 0"></div>
         <div class="col-xs-3 card">
           <div class="panel panel-warning">
@@ -17,8 +17,10 @@
                 <img src="{{comic.image.medium_url}}">
               </div>
               <div class="panel-body">Start Year: {{comic.start_year}}</div>
-                <button class="btn-success col-xs-6" ng-click="isOwned(comic)">Own It</button>
-                <button class="btn-success col-xs-6" ng-click="notOwned(comic)">Want It</button>
+              <span ng-show="hoverButtons" class="animate-show-hover-button">
+                <button class="btn btn-info col-xs-6" ng-click="isOwned(comic)">Own It</button>
+                <button class="btn btn-info col-xs-6" ng-click="notOwned(comic)">Want It</button>
+              </span>
           </div>
       </div>
   </div>

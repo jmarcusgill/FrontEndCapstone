@@ -49,8 +49,13 @@ $scope.isVillain = (character) => {
     });
   };
 
+  $scope.hoverIn = function(){
+        this.hoverButtons = true;
+    };
 
-
+    $scope.hoverOut = function(){
+        this.hoverButtons = false;
+    };
 
 
 });

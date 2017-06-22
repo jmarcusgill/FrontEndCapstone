@@ -1,8 +1,8 @@
 
 <div class="container comic-container">
-    <h1>Owned</h1>
-    <div class="comic-list">
-    <div ng-repeat="comic in comics |filter:{isOwned:true}">
+  <h1 class="title">Owned</h1>
+  <div class="list">
+    <div ng-repeat="comic in comics | filter:{isOwned:true} | orderBy: '-rating'">
       <div class="clearfix" ng-if="$index % 4 == 0"></div>
         <div class="col-xs-3 card">
           <div class="panel panel-warning">
@@ -25,8 +25,8 @@
 </div>
 
 <div class="container comic-container">
-      <h1>Want</h1>
-    <div class="comic-list">
+  <h1 class="title">Want</h1>
+    <div class="list">
       <div ng-repeat="comic in comics |filter:{isOwned:false}">
         <div class="clearfix" ng-if="$index % 4 == 0"></div>
           <div class="col-xs-3 card">

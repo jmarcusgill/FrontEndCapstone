@@ -3,7 +3,6 @@ app.controller("ComicSearchCtrl", function($scope, $rootScope, ngToast, ComicFac
   $scope.comicSearch = "";
   $scope.comicAPIresults = [];
   $scope.newComic = {
-    rating: 0,
     isOwned: false
   };
 
@@ -17,6 +16,7 @@ app.controller("ComicSearchCtrl", function($scope, $rootScope, ngToast, ComicFac
 
   $scope.isOwned = (comic) => {
   $scope.newComic.isOwned = true;
+  $scope.newComic.rating = 0;
   $scope.newComic.description = comic.description;
   $scope.newComic.image = comic.image.medium_url;
   $scope.newComic.start_year = comic.start_year;
@@ -33,6 +33,7 @@ app.controller("ComicSearchCtrl", function($scope, $rootScope, ngToast, ComicFac
 
   $scope.notOwned = (comic) => {
   $scope.newComic.isOwned = false;
+  $scope.newComic.rating = 0;
   $scope.newComic.description = comic.description;
   $scope.newComic.image = comic.image.medium_url;
   $scope.newComic.start_year = comic.start_year;
@@ -47,7 +48,13 @@ app.controller("ComicSearchCtrl", function($scope, $rootScope, ngToast, ComicFac
     });
   };
 
+  $scope.hoverIn = function(){
+        this.hoverButtons = true;
+    };
 
+    $scope.hoverOut = function(){
+        this.hoverButtons = false;
+    };
 
 
 
