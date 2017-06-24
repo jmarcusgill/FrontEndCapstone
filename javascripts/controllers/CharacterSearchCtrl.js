@@ -1,4 +1,4 @@
-app.controller("CharacterSearchCtrl", function($scope, $rootScope, $location, CharacterFactory){
+app.controller("CharacterSearchCtrl", function($scope, $rootScope, ngToast, CharacterFactory){
 
   $scope.characterSearch = "";
   $scope.characterAPIresults = [];
@@ -11,7 +11,6 @@ app.controller("CharacterSearchCtrl", function($scope, $rootScope, $location, Ch
     $scope.newCharacter.uid = $rootScope.user.uid;
     CharacterFactory.findMyCharacter($scope.characterSearch).then((characterAPIresults) => {
       $scope.characterAPIresults = characterAPIresults.data.results;
-      console.log("in charsearchctrl", $scope.characterAPIresults);
     }).catch((error) => {
       console.log("error", error);
     });
@@ -27,8 +26,8 @@ app.controller("CharacterSearchCtrl", function($scope, $rootScope, $location, Ch
   $scope.newCharacter.uid = $rootScope.user.uid;
   CharacterFactory.postNewCharacter($scope.newCharacter).then((response) => {
     $scope.newCharacter = { };
-    console.log("in hero click", $scope.newCharacter);
-    $location.url("/character/list");
+    ngToast.create('Character Saved to Heroes!');
+
     }).catch((error) => {
       console.log("Add error", error);
     });
@@ -44,15 +43,19 @@ $scope.isVillain = (character) => {
   $scope.newCharacter.uid = $rootScope.user.uid;
   CharacterFactory.postNewCharacter($scope.newCharacter).then((response) => {
     $scope.newCharacter = { };
-    console.log("in v click", $scope.newCharacter);
-    $location.url("/character/list");
+    ngToast.create('Character Saved to Villains!');
     }).catch((error) => {
       console.log("Add error", error);
     });
   };
 
+  $scope.hoverIn = function(){
+        this.hoverButtons = true;
+    };
 
-
+    $scope.hoverOut = function(){
+        this.hoverButtons = false;
+    };
 
 
 });

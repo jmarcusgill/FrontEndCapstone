@@ -1,41 +1,64 @@
-<h1>INSIDE comic-list</h1>
-<div class="container">
-    <h1>Owned</h1>
-  <div ng-repeat="comic in comics |filter:{isOwned:true}">
-    <div class="clearfix" ng-if="$index % 4 == 0"></div>
-      <div class="col-xs-3 card">
-        <div class="panel panel-warning">
-          <div class="panel-heading">{{comic.title}}</div>
-            <div class="thumbnail">
-              <img src="{{comic.image}}">
-            </div>
-            <div class="panel-body">Start Year: {{comic.start_year}}</div>
-            <div class="comic-btn">
-              <button ng-click="deleteComic(comic.id)"><i class="fa fa-trash comic-icon"></i></button>
-              <button class="fa fa-thumbs-up" ng-click="rateComicUp(comic)"></button>
-              {{comic.rating}}
-              <button class="fa fa-thumbs-down" ng-click="rateComicDown(comic)"></button>
-              <button class="fa fa-cart-arrow-down" ng-click="addToWishList(comic)"></button>
-            </div>
+
+<div class="container comic-container">
+  <h1 class="title">Owned</h1>
+  <div class="list">
+    <div ng-repeat="comic in comics | filter:{isOwned:true} | orderBy: '-rating'">
+      <div class="clearfix" ng-if="$index % 4 == 0"></div>
+        <div class="col-xs-3 card">
+          <div class="panel panel-warning">
+            <div class="panel-heading">{{comic.title}}</div>
+              <div class="thumbnail">
+                <img src="{{comic.image}}">
+              </div>
+              <div class="panel-body">Start Year: {{comic.start_year}}</div>
+              <div class="comic-btn">
+                <button ng-click="deleteComic(comic.id)"><i class="fa fa-trash comic-icon"></i></button>
+                <button class="fa fa-thumbs-up" ng-click="rateComicUp(comic)"></button>
+                {{comic.rating}}
+                <button class="fa fa-thumbs-down" ng-click="rateComicDown(comic)"></button>
+                <button class="fa fa-cart-arrow-down" ng-click="addToWishList(comic)"></button>
+              </div>
+          </div>
         </div>
-      </div>
+    </div>
   </div>
 </div>
 
-<div class="container">
-    <h1>Want</h1>
-  <div ng-repeat="comic in comics |filter:{isOwned:false}">
-    <div class="clearfix" ng-if="$index % 4 == 0"></div>
-      <div class="col-xs-3 card">
-        <div class="panel panel-warning">
-          <div class="panel-heading">{{comic.title}}</div>
-            <div class="thumbnail">
-              <img src="{{comic.image}}">
+<div class="container comic-container">
+  <h1 class="title">Want</h1>
+    <div class="list">
+      <div ng-repeat="comic in comics |filter:{isOwned:false}">
+        <div class="clearfix" ng-if="$index % 4 == 0"></div>
+          <div class="col-xs-3 card">
+            <div class="panel panel-warning">
+              <div class="panel-heading">{{comic.title}}</div>
+                <div class="thumbnail">
+                  <img src="{{comic.image}}">
+                </div>
+                <div class="panel-body">Start Year: {{comic.start_year}}</div>
+                <button ng-click="deleteComic(comic.id)"><i class="fa fa-trash comic-icon"></i></button>
+                <button class="fa fa-check" ng-click="addToOwned(comic)"></button>
             </div>
-            <div class="panel-body">Start Year: {{comic.start_year}}</div>
-            <button ng-click="deleteComic(comic.id)"><i class="fa fa-trash comic-icon"></i></button>
-            <button class="fa fa-check" ng-click="addToOwned(comic)"></button>
-        </div>
+          </div>
       </div>
-  </div>
+    </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

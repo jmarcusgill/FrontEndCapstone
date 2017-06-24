@@ -1,7 +1,7 @@
-<h1>INSIDE character-list</h1>
 <div class="container">
-  <h1>HERO</h1>
-    <div ng-repeat="character in characters |filter:{isVillain:false}">
+  <h1 class="title">HERO</h1>
+  <div class="list">
+    <div ng-repeat="character in characters |filter:{isVillain:false}" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">
       <div class="clearfix" ng-if="$index % 4 == 0"></div>
         <div class="col-xs-3 card">
           <div class="panel panel-warning">
@@ -11,24 +11,28 @@
                 <p>AKA: {{character.real_name}}</p>
               </div>
             </div>
-              <div class="thumbnail">
-                <img src="{{character.image}}">
-              </div>
+            <div class="thumbnail">
+              <img src="{{character.image}}">
+            </div>
+            <span ng-show="hoverBio" class="animate-show">
               <div class="panel-body">
                 <p>First Appeared In Issue: {{character.first_appeared}}</p>
                 <p>Bio: {{character.description}}</p>
               </div>
-              <div class="col-xs-1">
-                <button class="character-btn" ng-click="deleteCharacter(character.id)"><i class="fa fa-times character-icon"></i></button>
+              <div class="character-btn">
+                <button ng-click="deleteCharacter(character.id)"><i class="fa fa-trash character-icon"></i></button>
               </div>
+            </span>
           </div>
+        </div>
     </div>
   </div>
 </div>
 
 <div class="container">
-  <h1>VILLAIN</h1>
-  <div ng-repeat="character in characters |filter:{isVillain:true}">
+  <h1 class="title">VILLAIN</h1>
+  <div class="list">
+    <div ng-repeat="character in characters |filter:{isVillain:true}" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">
       <div class="clearfix" ng-if="$index % 4 == 0"></div>
         <div class="col-xs-3 card">
           <div class="panel panel-warning">
@@ -38,17 +42,22 @@
                 <p>AKA: {{character.real_name}}</p>
               </div>
             </div>
-              <div class="thumbnail">
-                <img src="{{character.image}}">
-              </div>
+            <div class="thumbnail">
+              <img src="{{character.image}}">
+            </div>
+            <span ng-show="hoverBio" class="animate-show">
               <div class="panel-body">
                 <p>First Appeared In Issue: {{character.first_appeared}}</p>
                 <p>Bio: {{character.description}}</p>
               </div>
-                <div class="col-xs-1">
-                  <button class="character-btn" ng-click="deleteCharacter(character.id)"><i class="fa fa-times character-icon"></i></button>
-                </div>
+              <div class="character-btn">
+                <button ng-click="deleteCharacter(character.id)"><i class="fa fa-trash character-icon"></i></button>
+              </div>
+            </span>
           </div>
-      </div>
+        </div>
+    </div>
   </div>
 </div>
+
+

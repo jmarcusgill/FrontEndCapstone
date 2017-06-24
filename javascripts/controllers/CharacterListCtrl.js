@@ -5,7 +5,6 @@ app.controller("CharacterListCtrl", function($rootScope, $scope, CharacterFactor
   let getCharacters = () => {
     CharacterFactory.getCharacterList($rootScope.user.uid).then((characterz)=>{
       $scope.characters = characterz;
-      console.log("in charlistctrl: characters", $scope.characters);
     }).catch((error)=> {
       console.log("got an error", error);
     });
@@ -14,7 +13,6 @@ app.controller("CharacterListCtrl", function($rootScope, $scope, CharacterFactor
   getCharacters();
 
   $scope.deleteCharacter = (characterId) => {
-    console.log("delete char working");
     CharacterFactory.deleted(characterId).then(() => {
       getCharacters();
     }).catch((error) => {
@@ -22,6 +20,13 @@ app.controller("CharacterListCtrl", function($rootScope, $scope, CharacterFactor
     });
   };
 
+  $scope.hoverIn = function(){
+        this.hoverBio = true;
+    };
+
+    $scope.hoverOut = function(){
+        this.hoverBio = false;
+    };
 
 
 });

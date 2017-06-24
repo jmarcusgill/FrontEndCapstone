@@ -23,14 +23,41 @@
     },
     "comic1": {
       "publisher": "DC Comics",
+      "title": "Batman: Year One",
+      "start_year": "1988",
+      "image": "https://comicvine.gamespot.com/api/image/scale_medium/2356058-bmyo_dlx_dj.jpg",
+      "isOwned": true,
+      "rating": 8,
+      "uid": "fWSgwLhOimhCl2sNiDlXggA8EP72"
+    },
+    "comic2": {
+      "publisher": "DC Comics",
+      "title": "Batman: The Long Halloween",
+      "start_year": "1999",
+      "image": "https://comicvine.gamespot.com/api/image/scale_medium/2140968-bats_long_hall_new_ptg.jpg",
+      "isOwned": true,
+      "rating": 8,
+      "uid": "fWSgwLhOimhCl2sNiDlXggA8EP72"
+    },
+    "comic3": {
+      "publisher": "DC Comics",
+      "title": "Batman: Haunted Knight",
+      "start_year": "1996",
+      "image": "https://comicvine.gamespot.com/api/image/scale_medium/4414505-01.jpg",
+      "isOwned": true,
+      "rating": 8,
+      "uid": "fWSgwLhOimhCl2sNiDlXggA8EP72"
+    },
+    "comic4": {
+      "publisher": "DC Comics",
       "title": "Batman: The Long Halloween",
       "start_year": "1999",
       "image": "https://comicvine.gamespot.com/api/image/scale_medium/2140968-bats_long_hall_new_ptg.jpg",
       "isOwned": false,
-      "rating": 10,
+      "rating": 0,
       "uid": "fWSgwLhOimhCl2sNiDlXggA8EP72"
     },
-    "comic2": {
+    "comic5": {
       "publisher": "DC Comics",
       "title": "Catwoman: When In Rome",
       "start_year": "2005",
@@ -39,13 +66,14 @@
       "rating": 7,
       "uid": "dv0pFT1mtvOrC7jDoI1KbHxuFY22"
     },
-    "comic3": {
+
+    "comic6": {
       "publisher": "DC Comics",
       "title": "Birds of Prey: Batgirl/Catwoman",
       "start_year": "2003",
       "image": "https://comicvine.gamespot.com/api/image/scale_medium/4121382-01.jpg",
       "isOwned": false,
-      "rating": 5,
+      "rating": 0,
       "uid": "dv0pFT1mtvOrC7jDoI1KbHxuFY22"
     }
   },
