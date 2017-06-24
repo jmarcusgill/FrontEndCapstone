@@ -1,10 +1,12 @@
 body {
-  background-color: #4d8066; }
+  background: url("http://picz.in/data/media/3/Abstract-Black-Textures-Artwork-Backgrounds.jpg") no-repeat center center fixed;
+  background-size: cover; }
 
-.title {
+.title, h1 {
   text-align: center;
   font-weight: 600;
-  text-dectoration: underline; }
+  text-dectoration: underline;
+  color: #fff; }
 
 .card {
   opacity: 0.5;

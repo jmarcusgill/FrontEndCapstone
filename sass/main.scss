@@ -1,14 +1,18 @@
 @import "color";
 
 body {
-  background-color: $green;
+  background: url('http://picz.in/data/media/3/Abstract-Black-Textures-Artwork-Backgrounds.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
-.title {
+.title, h1 {
   text-align: center;
   font-weight: 600;
   text-dectoration: underline;
+  color: $white;
 }
+
+
 
 .card {
   opacity: 0.5;
