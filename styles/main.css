@@ -2,7 +2,6 @@ body {
   background: url("http://picz.in/data/media/3/Abstract-Black-Textures-Artwork-Backgrounds.jpg") no-repeat center center fixed;
   background-size: cover; }
 
-
 .title, h1 {
   text-align: center;
   font-weight: 600;
@@ -65,3 +64,7 @@ div.mainContainer.ng-enter.ng-enter-active {
   -webkit-transition: all linear 0.1s;
   transition: all linear 0.1s;
   opacity: 0; }
+
+img.img-carousel {
+  height: 50%;
+  width: 80%; }

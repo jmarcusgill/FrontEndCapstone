@@ -54,7 +54,7 @@ app.controller("AuthCtrl", function($location, $rootScope, $scope, AuthFactory, 
     logMeIn();
   };
 
-  $scope.myInterval = 3500;
+  $scope.myInterval = 2000;
   $scope.noWrapSlides = false;
   $scope.active = 0;
   var slides = $scope.slides = [];
@@ -63,7 +63,7 @@ app.controller("AuthCtrl", function($location, $rootScope, $scope, AuthFactory, 
   $scope.addSlide = function() {
     var newWidth = 600 + slides.length + 1;
     slides.push({
-      image: '/images/carousel/carousel-1.jpg',
+      image: '/images/carousel/carousel-4.png',
       text: 'Got A Favorite Character?',
       id: currIndex++
     });
@@ -77,6 +77,11 @@ app.controller("AuthCtrl", function($location, $rootScope, $scope, AuthFactory, 
       text: 'Rate Which Comic Is Best!',
       id: currIndex++
     });
+    slides.push({
+      image: '/images/carousel/carousel-5.jpg',
+      text: 'Are you a hero, or villian?',
+      id: currIndex++
+    });
   };
 
   $scope.randomize = function() {
@@ -84,7 +89,7 @@ app.controller("AuthCtrl", function($location, $rootScope, $scope, AuthFactory, 
     assignNewIndexesToSlides(indexes);
   };
 
-  for (var i = 0; i < 3; i++) {
+  for (var i = 0; i < 1; i++) {
     $scope.addSlide();
   }
 
