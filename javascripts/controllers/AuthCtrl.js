@@ -54,7 +54,7 @@ app.controller("AuthCtrl", function($location, $rootScope, $scope, AuthFactory, 
     logMeIn();
   };
 
-  $scope.myInterval = 2000;
+  $scope.myInterval = 3500;
   $scope.noWrapSlides = false;
   $scope.active = 0;
   var slides = $scope.slides = [];
