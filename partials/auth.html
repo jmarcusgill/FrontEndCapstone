@@ -1,7 +1,7 @@
 <div class="container hvrbox">
-<div uib-alert ng-repeat="alert in alerts" class="alert-danger">
-  {{alert.msg}}
-</div>
+  <div uib-alert ng-repeat="alert in alerts" class="alert-danger">
+    {{alert.msg}}
+  </div>
   <div style="height: 305px">
     <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
       <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
