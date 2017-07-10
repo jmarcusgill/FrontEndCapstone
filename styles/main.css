@@ -2,8 +2,27 @@ body {
   background: url("http://picz.in/data/media/3/Abstract-Black-Textures-Artwork-Backgrounds.jpg") no-repeat center center fixed;
   background-size: cover; }
 
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: red;
+  background-color: #fbcb6a;
+  margin-bottom: 40px;
+}
 
-/* navbar styles */
+.nav-tabs.nav-justified > li > a {
+  color: purple;
+  border: none;
+  transition-property: all;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in-ease-out;
+}
+
+.nav-tabs.nav-justified > li > a:hover {
+  border: none;
+  color: red;
+  background-color: #fbcb6a;
+}
+
 .navbar-default .navbar-nav > li > a {
   color: #B10DC9;
   transition-property: all;
@@ -20,15 +39,11 @@ body {
   background-color: #fbcb6a;
   color: #FF4136; }
 
-/* End navbar styles */
-
 .title, h1 {
   text-align: center;
   font-weight: 600;
-  text-dectoration: underline;
+  text-decoration: underline;
   color: #fff; }
-
-/* comic and character styles */
 
 .card {
   opacity: 0.5;
@@ -47,8 +62,6 @@ body {
 .comic-btn {
   margin: auto;
   text-align: center; }
-
-/* animation for characters */
 
 div.mainContainer.ng-enter {
   transition: 0.25s linear all;
@@ -89,11 +102,14 @@ div.mainContainer.ng-enter.ng-enter-active {
   transition: all linear 0.1s;
   opacity: 0; }
 
-/* carousel style */
-
 img.img-carousel {
   height: 50%;
   width: 80%; }
+
+.slide-text {
+  color: orange;
+  text-shadow: 2px 2px navy;
+}
 
 .image {
   opacity: 1;
@@ -119,7 +135,8 @@ img.img-carousel {
   opacity: 1; }
 
 .text {
-  background-color: #4CAF50;
+  /*background-color: #4CAF50;*/
+  background-color: orange;
   color: white;
   font-size: 16px;
   padding: 16px 32px; }
