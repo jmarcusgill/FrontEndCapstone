@@ -43,7 +43,20 @@ body {
   text-align: center;
   font-weight: 600;
   text-decoration: underline;
-  color: #fff; }
+  color: navajowhite; }
+
+.search {
+  margin-bottom: 20px;
+}
+
+.search-btn {
+  color: white;
+}
+
+.search-btn:hover {
+  background-color: red;
+  color: white;
+}
 
 .card {
   opacity: 0.5;

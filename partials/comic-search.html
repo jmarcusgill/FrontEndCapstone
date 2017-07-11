@@ -1,7 +1,7 @@
-<div class="container col-xs-4 col-xs-offset-4">
+<div class="container col-xs-4 col-xs-offset-4 search">
   <h1>Search Comics</h1>
   <input type="text" placeholder="find comics" ng-model="comicSearch">
-  <button class="btn btn-warning" ng-click="findComics()">Find Comic Book</button>
+  <button class="btn btn-warning search-btn" ng-click="findComics()">Find Comic Book</button>
 </div>
 
 
@@ -18,8 +18,8 @@
               </div>
               <div class="panel-body">Start Year: {{comic.start_year}}</div>
               <span ng-show="hoverButtons" class="animate-show-hover-button">
-                <button class="btn btn-info col-xs-6" ng-click="isOwned(comic)">Own It</button>
-                <button class="btn btn-info col-xs-6" ng-click="notOwned(comic)">Want It</button>
+                <button class="btn btn-warning col-xs-6" ng-click="isOwned(comic)">Own It</button>
+                <button class="btn btn-danger col-xs-6" ng-click="notOwned(comic)">Want It</button>
               </span>
           </div>
       </div>
