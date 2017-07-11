@@ -7,10 +7,10 @@
       <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
         <img ng-src="{{slide.image}}" class="img-carousel image" style="margin:auto;">
         <div class="carousel-caption">
-          <h3>{{slide.text}}</h3>
+          <h3 class="slide-text">{{slide.text}}</h3>
         </div>
         <div ng-show="showLoginbutton" class="middle">
-          <button class="btn btn-success text" ng-click="showLogin()">ENTER</button>
+          <button class="btn btn-danger text" ng-click="showLogin()">ENTER</button>
         </div>
       </div>
     </div>
@@ -20,10 +20,10 @@
 
 <div class="container login col-xs-4 col-xs-offset-4">
   <div ng-show="!showLoginView">
-    <input type="email" class="form-control form-spacing" placeholder="Email Address" ng-model="auth.email" required autofocus>
+    <input type="email" class="form-control form-spacing form-control-warning" placeholder="Email Address" ng-model="auth.email" required autofocus>
     <input type="text" class="form-control form-spacing" placeholder="Username" ng-model="auth.username" required autofocus>
     <input type="password" class="form-control form-spacing" placeholder="Password" ng-model="auth.password" required>
-    <a class="btn btn-lg btn-success col-xs-6" ng-click="loginUser()" >Login</a>
-    <a class="btn btn-lg btn-primary col-xs-6" ng-click="registerUser()" >Register</a>
+    <a class="btn btn-lg btn-warning col-xs-6" ng-click="loginUser()" >Login</a>
+    <a class="btn btn-lg btn-danger col-xs-6" ng-click="registerUser()" >Register</a>
   </div>
 </div>

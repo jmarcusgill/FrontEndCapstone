@@ -1,63 +1,66 @@
-<div class="container">
-  <h1 class="title">HERO</h1>
-  <div class="list">
-    <div ng-repeat="character in characters |filter:{isVillain:false}" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">
-      <div class="clearfix" ng-if="$index % 4 == 0"></div>
-        <div class="col-xs-3 card">
-          <div class="panel panel-warning">
-            <div class="panel-heading">
-              <div class="panel-title">
-                <p>{{character.name}}</p>
-                <p>AKA: {{character.real_name}}</p>
+<uib-tabset active="activeJustified" justified="true">
+  <uib-tab index="0" class="heading" heading="HEREOS" active="activeForm">
+    <div class="container">
+      <div class="list">
+        <div ng-repeat="character in characters |filter:{isVillain:false}" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">
+          <div class="clearfix" ng-if="$index % 4 == 0"></div>
+            <div class="col-xs-3 card">
+              <div class="panel panel-warning">
+                <div class="panel-heading">
+                  <div class="panel-title">
+                    <p>{{character.name}}</p>
+                    <p>AKA: {{character.real_name}}</p>
+                  </div>
+                </div>
+                <div class="thumbnail">
+                  <img src="{{character.image}}">
+                </div>
+                <span ng-show="hoverBio" class="animate-show">
+                  <div class="panel-body">
+                    <p>First Appeared In Issue: {{character.first_appeared}}</p>
+                    <p>Bio: {{character.description}}</p>
+                  </div>
+                  <div class="character-btn">
+                    <button ng-click="deleteCharacter(character.id)"><i class="fa fa-trash character-icon"></i></button>
+                  </div>
+                </span>
               </div>
             </div>
-            <div class="thumbnail">
-              <img src="{{character.image}}">
-            </div>
-            <span ng-show="hoverBio" class="animate-show">
-              <div class="panel-body">
-                <p>First Appeared In Issue: {{character.first_appeared}}</p>
-                <p>Bio: {{character.description}}</p>
-              </div>
-              <div class="character-btn">
-                <button ng-click="deleteCharacter(character.id)"><i class="fa fa-trash character-icon"></i></button>
-              </div>
-            </span>
-          </div>
         </div>
+      </div>
     </div>
-  </div>
-</div>
-
-<div class="container">
-  <h1 class="title">VILLAIN</h1>
-  <div class="list">
-    <div ng-repeat="character in characters |filter:{isVillain:true}" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">
-      <div class="clearfix" ng-if="$index % 4 == 0"></div>
-        <div class="col-xs-3 card">
-          <div class="panel panel-warning">
-            <div class="panel-heading">
-              <div class="panel-title">
-                <p>{{character.name}}</p>
-                <p>AKA: {{character.real_name}}</p>
+  </uib-tab>
+  <uib-tab index="1" class="heading" heading="VILLAINS" active="activeForm">
+    <div class="container">
+      <div class="list">
+        <div ng-repeat="character in characters |filter:{isVillain:true}" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">
+          <div class="clearfix" ng-if="$index % 4 == 0"></div>
+            <div class="col-xs-3 card">
+              <div class="panel panel-warning">
+                <div class="panel-heading">
+                  <div class="panel-title">
+                    <p>{{character.name}}</p>
+                    <p>AKA: {{character.real_name}}</p>
+                  </div>
+                </div>
+                <div class="thumbnail">
+                  <img src="{{character.image}}">
+                </div>
+                <span ng-show="hoverBio" class="animate-show">
+                  <div class="panel-body">
+                    <p>First Appeared In Issue: {{character.first_appeared}}</p>
+                    <p>Bio: {{character.description}}</p>
+                  </div>
+                  <div class="character-btn">
+                    <button ng-click="deleteCharacter(character.id)"><i class="fa fa-trash character-icon"></i></button>
+                  </div>
+                </span>
               </div>
             </div>
-            <div class="thumbnail">
-              <img src="{{character.image}}">
-            </div>
-            <span ng-show="hoverBio" class="animate-show">
-              <div class="panel-body">
-                <p>First Appeared In Issue: {{character.first_appeared}}</p>
-                <p>Bio: {{character.description}}</p>
-              </div>
-              <div class="character-btn">
-                <button ng-click="deleteCharacter(character.id)"><i class="fa fa-trash character-icon"></i></button>
-              </div>
-            </span>
-          </div>
         </div>
+      </div>
     </div>
-  </div>
-</div>
+  </uib-tab>
+</uib-tabset>
 
 
