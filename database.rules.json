@@ -1,0 +1,15 @@
+{
+  "rules": {
+    ".read": "true",
+    ".write": "true",
+    "characters": {
+      ".indexOn": "uid"
+    },
+    "comicbooks": {
+      ".indexOn": "uid"
+    },
+    "users": {
+      ".indexOn": "uid"
+    }
+  }
+}
